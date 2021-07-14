@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Movie;
 
-class MovieController extends Controller
+class TvSeriesController extends Controller
 {
     public function index() {
         $links = [
@@ -23,8 +22,6 @@ class MovieController extends Controller
             ]
         ];
 
-        $movies = Movie::all();
-
-        return view('home', compact('links', 'movies'));
+        return view('tv-series', compact('links'));
     }
 }
