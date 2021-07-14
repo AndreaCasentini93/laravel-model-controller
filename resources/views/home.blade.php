@@ -8,6 +8,40 @@
     </head>
 
     <body>
-        @dump($movies)
+        {{-- HEADER --}}
+        <header>
+            Header
+        </header>
+        {{-- /HEADER --}}
+
+        {{-- MAIN --}}
+        <main>
+            <section id="movies">
+                <div class="container d-flex">
+                    @foreach ($movies as $movie)
+                        <div class="movie">
+                            <ul>
+                                <li>
+                                    <strong>Titolo</strong>: {{ $movie->title }}
+                                </li>
+                                <li>
+                                    <strong>Titolo Originale</strong>: {{ $movie->original_title }}
+                                </li>
+                                <li>
+                                    <strong>Nazionalità</strong>: {{ $movie->nationality }}
+                                </li>
+                                <li>
+                                    <strong>Data di Uscita</strong>: {{ $movie->date }}
+                                </li>
+                                <li>
+                                    <strong>Voto</strong>: {{ $movie->vote }}
+                                </li>
+                            </ul>
+                        </div>
+                    @endforeach
+                </div>
+            </section>
+        </main>
+        {{-- /MAIN --}}
     </body>
 </html>
