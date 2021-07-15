@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('title', 'Film | Home')
+@section('title', 'Movies | Film')
 
 @section('main-content')
     <h2>{{ $links[1]['text'] }}</h2>
